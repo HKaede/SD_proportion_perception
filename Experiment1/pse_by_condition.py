@@ -336,13 +336,13 @@ def plot_pse_line(pse_by_condition):
         )
     
     # Connect points with line segments
-    for i in range(len(x_positions) - 1):
-        ax.plot(
-            x_positions[i:i+2], 
-            means[i:i+2], 
-            color=colors[i+1], 
-            linewidth=2
-        )
+    ax.plot(
+        x_positions,
+        means,
+        color='gray',
+        linewidth=2.5,
+        zorder=1 
+    )
     
     # Add statistical comparison line
     x1, x2 = 1, 4
